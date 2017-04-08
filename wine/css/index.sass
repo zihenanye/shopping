@@ -1,0 +1,348 @@
+html,body,.wrapper
+  width: 100%
+  height: 100%
+body
+  font-size: 16px
+  background: #eeeeee
+.wrapper
+  display: -webkit-flex
+  flex-direction: column
+.header
+  height: 46px
+  position: relative
+  background: #ffffff
+  border-bottom: 1px solid #e5e5e5
+  div
+    position: absolute
+    line-height: 46px 
+    &:nth-child(1)
+      left: 5%
+    &:nth-child(3)
+      right: 5%
+      .fa
+        position: relative
+        b
+          right: -1px
+          top: 2px
+          position: absolute
+          width: 6px
+          height: 6px
+          background: red
+          border-radius: 50%
+    &:nth-child(2)
+      width: 100%
+      text-align: center
+      font-size: .18rem
+      color: #333333
+    .fa
+      font-size: 20px
+
+
+section
+  flex: 1
+  overflow-y: scroll
+  .banner
+    img
+      width: 100%
+  .des
+    background: #ffffff
+    padding: 15px
+    margin-bottom: 15px
+    h4
+      font-size: .17rem
+      color: #4F99F2
+      font-weight: normal
+    .content
+      box-sizing: border-box
+      b
+        font-size: .15rem
+        color: #333333
+        font-weight: normal
+        line-height: 40px
+      p
+        font-size: .14rem
+        color: #333333
+        padding-left: 26px
+        line-height: 30px
+  .title
+    height: 50px
+    line-height: 50px
+    background: #4F98F1
+    font-size: .16rem
+    color: #ffffff
+    text-align: center
+  .pics
+    height: 250px
+    background: #ffffff
+    padding: 15px 0
+    text-align: center
+    img
+      height: 100%
+  .description
+    background: #ffffff
+    border-top: 1px solid #eeeeee
+    padding: 0 15px
+    box-sizing: border-box
+    .name
+      height: 42px
+      line-height: 42px
+      font-size: .16rem
+      color: #333333
+    .classify
+      height: 54px
+      border-top: 1px solid #e5e5e5
+      border-bottom: 1px solid #e5e5e5
+      padding: 8px 0
+      ul
+        display: -webkit-flex
+        li
+          flex: 1
+          text-align: center
+          font-size: .14rem
+          b
+            display: block
+            padding-bottom: 8px
+          p
+            color: #4F99F2
+          &:nth-child(1)
+            border-right: 1px solid #e5e5e5
+    .time
+      padding: 10px 0
+      border-bottom: 1px solid #e5e5e5
+      display: -webkit-flex
+      div
+        flex: 1
+        p
+          font-size: .12rem
+          color: #666666
+          line-height: 26px
+      .right
+        p
+          padding-left: 20px
+          box-sizing: border-box
+  .iconss
+    padding: 15px
+    box-sizing: border-box
+    background: #ffffff
+    height: 74px
+    dl
+      height: 100%
+      display: -webkit-flex
+      dt
+        height: 100%
+        width: 20%
+        img
+          height: 100%
+      dd
+        font-size: .15rem
+        b
+          color: #333333
+          font-weight: normal
+        p
+          color: #666666
+          padding-top: 5px
+          a
+            color: #4F99F1
+            text-decoration: underline
+            padding-left: 5px
+  .info
+    padding: 15px
+    box-sizing: border-box
+    background: #ffffff
+    ul li
+      height: 26px
+      line-height: 26px
+      display: -webkit-flex
+      font-size: .15rem
+      b
+        color: #333333
+        font-weight: normal
+      p
+        color: #999
+        width: 20%
+    .maps
+      p
+        color: #333
+        font-size: .15rem
+      div
+        height: 180px
+  .archives
+    padding: 15px
+    box-sizing: border-box
+    background: #ffffff
+    .tit
+      height: 30px
+      line-height: 30px
+      text-align: center
+      color: #4F99F2
+      font-size: .16rem
+    p
+      height: 20px
+      line-height: 20px
+      text-align: center
+      color: #4F99F2
+      font-size: .15rem
+      .fa
+        padding: 0 2px
+    .cont
+      height: 100px
+      padding: 15px 0
+      display: -webkit-flex
+      dl
+        flex: 1
+        text-align: center
+        dt
+          width: 80px
+          height: 80px
+          border: 1px solid #4F99F2
+          border-radius: 50%
+          text-align: center
+          line-height: 80px
+          margin-left: 20%
+          .fa
+            font-size: 40px
+            color: #4F99F2
+        dd
+          padding-top: 15px
+          color: #4F99F2
+  .produce
+    padding: 15px
+    box-sizing: border-box
+    background: #ffffff
+    .tit
+      height: 30px
+      line-height: 30px
+      text-align: center
+      color: #4F99F2
+      font-size: .16rem
+    ul
+      height: 50px
+      line-height: 50px
+      display: -webkit-flex
+      li
+        flex: 1
+        text-align: center
+        font-size: .14rem
+        &:nth-child(2)
+          position: relative
+          .track-check
+            margin: 5px 5px 0 0
+          .fa
+            position: absolute
+            right: 0
+            font-size: 20px
+            top: 25%
+            color: #666666
+  .product
+    padding: 15px
+    box-sizing: border-box
+    background: #ffffff
+    .tit
+      height: 30px
+      line-height: 30px
+      text-align: center
+      color: #4F99F2
+      font-size: .16rem
+    .banner
+      height: 150px
+      padding: 15px 0
+      text-align: center
+      img
+        width: 40%
+    .food
+      padding: 10px 10%
+      box-sizing: border-box
+      text-align: center
+      border-top: 1px solid #eeeeee
+      padding-bottom: 0
+      p
+        font-size: .14rem
+        color: #666
+        line-height: 25px
+  .company
+    padding: 15px
+    box-sizing: border-box
+    background: #ffffff
+    .tit
+      height: 30px
+      line-height: 30px
+      text-align: center
+      color: #4F99F2
+      font-size: .16rem
+    .article p
+      color: #333
+      font-size: .14rem
+      text-indent: 25px
+      line-height: 22px
+  .purchase
+    padding: 15px 0
+    box-sizing: border-box
+    background: #ffffff
+    .tit
+      height: 30px
+      line-height: 30px
+      text-align: center
+      color: #4F99F2
+      font-size: .16rem
+    .uls
+      border-bottom: 1px solid #e5e5e5
+      ul
+        display: -webkit-flex
+        height: 50px
+        line-height: 50px
+        li
+          flex: 1
+          text-align: center
+          font-size: .14rem
+    ol
+      li
+        padding: 0 15px
+        box-sizing: border-box
+        border-bottom: 1px solid #e5e5e5
+        height: 60px
+        line-height: 60px
+        position: relative
+        font-size: .15rem
+        a
+          position: absolute
+          right: 15px
+          .fa
+            color: #919191
+  .shop
+    padding: 15px 0
+    box-sizing: border-box
+    background: #ffffff
+    .tit
+      height: 30px
+      line-height: 30px
+      text-align: center
+      color: #4F99F2
+      font-size: .16rem
+    .dls
+      display: -webkit-flex
+      padding: 10px 0
+      dl
+        flex: 1
+        text-align: center
+        margin-left: 5px
+        dt img
+          width: 90%
+        dd
+          text-align: left
+          b
+            font-size: .13rem
+            font-weight: normal
+          p
+            height: 20px
+            line-height: 20px
+            color: #4F99F2
+            .fa
+              font-size: 16px
+              padding: 0 1px
+  .foot
+    height: 50px
+    line-height: 50px
+    color: #bbb
+    text-align: center
+
+
