@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test4.14</title>
+</head>
+<style>
+	body{
+		margin: 100px 100px;
+	}
+	.num{
+		width:104px;
+		border: 1px solid #ccc;
+		border-radius: 8px;
+		cursor: pointer;
+	}
+	.num span{
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		text-align: center;
+		line-height: 30px ;
+	}
+</style>
+<body>
+<div ng-app="app">
+    <div ng-controller="ctrl">
+        <p class="num">
+        	<span ng-click="rem()" style="border-right: 1px solid #ccc">-</span>
+        	<span style="border-right: 1px solid #ccc">{{count}}</span>
+        	<span ng-click="add()">+</span>
+        </p>
+        <p>单价：￥{{price}}.00</p>
+        <p><b style="color: orange">合计：{{total}}.00</b></p>
+    </div>
+</div>
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript">
+    var app = angular.module("app", []);
+    app.controller("ctrl",function($scope){
+    	$scope.price=10;
+    	$scope.count=0;
+    	$scope.rem=function(){
+    		$scope.count--;
+    		if($scope.count<=0){
+	    		$scope.count=0
+	    	}
+	    	$scope.total=$scope.price*$scope.count;
+    	}
+    	$scope.add=function(){
+    		$scope.count++;
+	    	$scope.total=$scope.price*$scope.count;
+    	}
+
+    })
+</script>
+</body>
+</html>
