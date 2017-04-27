@@ -1,0 +1,367 @@
+body{
+    background: #f5f5f5;
+    font-family:MicrosoftYaHei;
+
+}
+.row{
+    background: #ffffff;
+    margin: 0 50px;
+}
+.nav-tabs,.tabss{
+    background: #f5f5f5;
+}
+.nav-tabs li{
+    width: 120px;
+    text-align: center;
+}
+.nav-pills li a{
+    color: #333;
+    font-size: 16px;
+}
+.nav-pills li a.active{
+    color: #01b0b9 !important
+}
+.nav-pills li a::after{
+    content: "";
+    position: absolute;
+    right: 5px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-left: 1px solid #666;
+    border-bottom: 1px solid #666;
+    transform: rotate(-135deg);
+}
+.nav-pills li a.active::after{
+    content: "";
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 15px;
+    border-color: #01b0b9;
+
+}
+.breadcrumb{
+    margin-bottom: 0;
+}
+/*.nav-pills .active{*/
+    /*color:#01b0b9;!important;*/
+/*}*/
+
+/*index*/
+.birth{
+    margin: 0 30px;
+    height: 130px;
+    background: #fff;
+    border-bottom: 10px solid #e1e1e1;
+}
+.birth dl{
+    padding: 30px;
+}
+.birth dl dt{
+    background:#01b0b9;
+    border-radius:7px;
+    width:70px;
+    height:70px;
+    line-height: 70px;
+}
+.birth dl dd b{
+    font-size:24px;
+    color:#01b0b9;
+    font-weight: normal;
+}
+.birth dl dd p{
+    font-size: 14px;
+    padding-top: 15px;
+}
+.nav-tabs{
+    margin: 20px 40px 0 0px;
+    border: none;
+}
+.nav-tabs li.bg{
+    background: #ffffff;
+}
+
+.title h5{
+    margin: 0;
+    height: 70px;
+    line-height: 70px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: #000;
+}
+ .title p{
+    font-size: 14px;
+    line-height: 25px;
+}
+.name{
+    height: 550px;
+    line-height: 50px;
+    margin-bottom: 10px
+}
+.name input{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    color: #333;
+}
+.input-file input{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+.input-file label{
+    width: 100%;
+    height: 500px;
+    border: 1px solid #ccc;
+    background: #eee url("../images/pic3.png") no-repeat center center;
+}
+.col-md-12{
+    padding:0
+}
+.col-md-6{
+    padding-left: 0;
+}
+.comment h5{
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: #222;
+}
+.comment ul{
+    margin-top: 10px;
+    padding: 0;
+}
+.comment ul li{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    list-style: none;
+    border-bottom: 1px solid #eee;
+}
+.comment ul li .col-md-4{
+    text-align: center;
+    font-size:14px;
+    color:#999999;
+}
+.comment ul li .col-md-4 a{
+    padding-left: 35px;
+}
+.comment #txt{
+    border:1px solid #01b0b9;
+    width:98%;
+    height:78px;
+}
+.comment p{
+    text-align: right;
+    padding: 0 20px;
+}
+.comment p .btn{
+    width: 120px;
+    height: 40px;
+    background: #01b0b9;
+    border-radius: 5px;
+    color: #fff;
+
+}
+.timeline-wrap{
+    border-left: 2px solid #aaa;
+    position: relative;
+    padding: 30px 21px 50px 0;
+    margin: 30px 0;
+}
+.timeline-wrap span{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border: 2px solid #aaa;
+    border-radius:100%;
+}
+.timeline-wrap span.top{
+    left: -6px;
+    top: -5px;
+}
+.timeline-wrap span.bottom{
+    left: -6px;
+    bottom: -5px;
+}
+.time-line li{
+    position: relative;
+}
+.time-line li:after{
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #aaa;
+    border: 2px solid #fff;
+    border-radius: 100%;
+    left: -7px;
+    top: 20px;
+}
+.time-line > li:hover:after{
+    background-color: dodgerblue;
+}
+.time-line li.active:after{
+    background: dodgerblue;
+}
+
+
+#list2 h5,.row h5{
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 10px;
+}
+.row h5{
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: #222;
+    margin-bottom: 10px;
+}
+.activeList div dl{
+    background:#ffffff;
+    border:1px solid #979797;
+    box-shadow:0px 2px 4px 0px rgba(0,0,0,0.50);
+    height:244px;
+}
+.activeList div dl dt{
+    position: relative;
+}
+
+.activeList div dl dt span{
+    position: absolute;
+    left: -50px;
+    top: -50px;
+    border: 50px solid transparent;
+    border-bottom-color: #d45858;
+    width: 0;
+    height: 0;
+    color: #fff;
+    -webkit-transform: rotate(-45deg);
+}
+.activeList div:nth-child(2) dl dt span{
+    border-bottom-color: #757575;
+}
+.activeList div:nth-child(3) dl dt span{
+    border-bottom-color: #01b0b9;
+}
+.activeList div dl dt em {
+    position: absolute;
+    left: 0px;
+    top: 14px;
+    color: #fff;
+    font-style: normal;
+    font-weight: normal;
+    -webkit-transform: rotate(-45deg);
+}
+
+.activeList div dl dt input-file label{
+    height: 176px;
+}
+.activeList div dl dd{
+    padding: 0 10px;
+}
+.activeList div dl dd b{
+    font-size:14px;
+    color:#212121;
+}
+.activeList div dl dd p{
+    padding-top: 10px;
+    position: relative;
+}
+.activeList div dl dd p span{
+    font-family:PingFangSC-Regular;
+    font-size:14px;
+    color:#999999;
+}
+.activeList div dl dd p span:nth-child(2){
+   position: absolute;
+    right: 0;
+}
+/*   */
+.order h5{
+    margin: 0;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #ccc;
+    font-size: 18px;
+    color: #222;
+}
+.order div{
+    height: 60px;
+}
+.order div b{
+    font-weight: normal;
+    font-size: 12px;
+    color: #999;
+    padding: 5px 0;
+}
+.order div input{
+    width: 100%;
+    height: 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.order p {
+    height: 50px;
+    text-align: right;
+    padding-right: 15px;
+}
+.scrollspy-example{
+    padding-left: 50px;
+    background: #ffffff;
+}
+#info2 h5{
+    position: relative;
+}
+#info2 h5 span{
+    position: absolute;
+    right: 10px;
+}
+#enroll,#back{
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    border: none;
+    background: #01b0b9;
+    border-radius: 5px;
+    color: #fff;
+    margin-top: 10px;
+}
+.enroll{
+    text-align: right;
+    padding-right: 20px;
+}
+
+#name3 input{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border: none;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+#resident{
+    margin: 0;
+}
+.tab-pane{
+    margin-bottom: 30px;
+}
+.classify{
+    padding: 0 50px;
+    background: #ffffff;
+}

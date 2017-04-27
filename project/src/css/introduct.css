@@ -1,0 +1,35 @@
+.content h4{
+    position: relative;
+}
+.content h4 span{
+    position: absolute;
+    right: 0;
+    font-size:14px;
+    color:#999999;
+}
+.info{
+    height: 185px;
+}
+.file-upload-info{
+    height: 185px;
+    line-height: 185px;
+}
+.dropdown-menu{
+    padding-left: 0;
+    text-align: center;
+
+}
+.navs{
+    min-height: 38px;
+    line-height: 38px;
+    background: #eeeeee;
+    margin-top: 20px;
+    border:1px solid #cccccc;
+    border-radius:4px 4px 0px 0px;
+}
+.navs div div {
+    font-size: 14px;
+    color: #999999;
+    border-right: 1px solid #cccccc;
+    text-align: center;
+}

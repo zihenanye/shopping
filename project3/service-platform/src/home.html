@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="dist/css/bootstrap.css">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!--font-->
+    <link rel="stylesheet" href="../font/iconfont.css">
+    <link rel="stylesheet" href="css/home.css">
+    <!-- Custom styles for this template -->
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">注册 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">登录</a></li>
+                    <li><a href="#">通知</a></li>
+                    <li><a href="#">设置</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+            <div class="col-md-2">
+                <a class="navbar-brand" href="#"><img src="images/pic.png" alt=""></a>
+            </div>
+            <div class="col-md-7">
+                <ul class="nav nav-pills nav-justified">
+                    <li><a ui-sref="index" ui-sref-active="active">首页</a></li>
+                    <li><a ui-sref="group" ui-sref-active="active">社区团体活动服务</a></li>
+                    <li><a ui-sref="organize" ui-sref-active="active">党组织活动服务</a></li>
+                    <li><a ui-sref="autonomy" ui-sref-active="active">居民自治活动服务</a></li>
+                </ul>
+                <!--<ul class="nav navbar-nav">-->
+                    <!--<li class="on"><a ui-sref-active="on" ui-sref="index">首页</a></li>-->
+                    <!--<li><a ui-sref-active="on" ui-sref="community">社区团体活动服务</a></li>-->
+                    <!--<li><a ui-sref-active="on" ui-sref="party">党组织活动服务</a></li>-->
+                    <!--<li><a ui-sref-active="on" ui-sref="resident">居民自治活动服务</a></li>-->
+                <!--</ul>-->
+            </div>
+        </div>
+    </div><!-- /.container-fluid -->
+</nav>
+    <div class="container">
+       <div class="row">
+           <ol class="breadcrumb">
+               当前位置：<li><a href="#">首页</a></li>
+               <li><a href="#">社区养老</a></li>
+               <li><a href="">离休退休</a></li>
+           </ol>
+       </div>
+    </div>
+    <div ui-view></div>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/angular-ui-router.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    <script type="text/javascript" src="js/config.js"></script>
+</body>
+</html>

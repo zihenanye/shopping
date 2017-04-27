@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body ng-app="app">
+	<div ng-controller="control1">
+		<h4>转换为货币</h4>
+		<input type="text" ng-model="txt">
+		{{txt | currency:"￥":3}}
+		<br>
+
+		<h4>大写</h4>
+		<input type="text" ng-model="upper">
+		{{upper | uppercase}}
+		<br>
+
+		<h4>日期</h4>
+		<input type="text" ng-model="data">
+		{{data | date:'yyyy-MM-dd HH:mm:ss'}}
+		<br><br>
+		
+		<h4>总价</h4>
+		<input type="number" ng-model="quantity">
+		<input type="number" ng-model="price">
+
+		<p>总价 = {{ (quantity * price) | currency }}</p>
+
+
+		<h4>排序、模糊搜索</h4>
+		<input type="text" ng-model="name">
+		<ul>
+			<li ng-repeat="i in arr | orderBy:'age' | filter:name"><span>{{i.name}}</span><sapn>:{{i.age}}</sapn></li>
+		</ul>
+		<h4>自定义过滤器</h4>
+		<input type="text" ng-model="custom"> 
+		{{custom | upper | reverse}}
+	</div>
+    <script src="jquery.js"></script>
+    <script src="angular.js"></script>
+    <script>
+        var app = angular.module("app", []);
+        app.controller("control1", function ($scope) {
+            $scope.arr=[ 
+                {
+                    "name":"zhangsan",
+                    "age":20,
+                    "sex":"女"
+                },
+                {
+                    "name":"lisi",
+                    "age":39,
+                    "sex":"男"
+                },
+                {
+                    "name":"wangwu",
+                    "age":18,
+                    "sex":"女"
+                },
+                {
+                    "name":"zhaoliu",
+                    "age":30,
+                    "sex":"女"
+                },
+                {
+                    "name":"lili",
+                    "age":12,
+                    "sex":"女"
+                },
+                {
+                    "name":"qiqi",
+                    "age":6,
+                    "sex":"男"
+                }
+            ]
+
+            //当前日期
+            $scope.data=new Date();
+
+        });
+        //自定义一个过滤器
+        app.filter("upper",function(){
+        	return function(data){
+        		if(data){
+        			return data.toUpperCase();
+        		}
+        	}
+        });
+        
+        app.filter('reverse', function() { //可以注入依赖
+		    return function(data) {
+		        return data.split("").reverse().join("");
+		        
+		    }
+		});
+
+    </script>
+</body>
+</html>

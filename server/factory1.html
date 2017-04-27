@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div ng-controller="ctrl">
+
+    <h1>{{name}}</h1>
+    <h2>{{count}}</h2>
+    <div><button ng-click="say()">调用sayName</button></div>
+
+</div>
+<div ng-controller="ctrl2">
+
+    <input type="text" ng-model="centance">
+
+    <button ng-click="add()">添加</button>
+
+    <ol>
+        <li ng-repeat=" x in arr">{{x}}</li>
+    </ol>
+
+</div>
+
+<script src="angular.js"></script>
+<script>
+    //创建angular程序
+    var app = angular.module("app",[]);
+    //创建service服务
+    app.service('serve',function () {
+
+        this.name = '1502C';
+
+        this.count = '53';
+
+        this.sayName = function () {
+            alert(this.name)
+        }
+
+    });
+    //创建发factory服务
+    app.factory('fact',function ($log) {
+        var ls = window.localStorage;
+        var store = ls.getItem('poemlist');
+        if(store){
+            store = JSON.parse(store)
+        }
+        var func = function () {
+            this.poemlist = store || []
+        };
+        func.prototype = {
+            saveToLocal:function(){
+                ls.setItem('poemlist',JSON.stringify(this.poemlist))
+            },
+            getFromLocal:function(){
+                return this.poemlist
+            }
+        };
+
+        return new func();
+    });
+    //创建与视图对应的控制器
+    app.controller('ctrl',ctrlFn);
+    app.controller('ctrl2',ctrl2Fn);
+    //控制器逻辑
+    function ctrlFn($scope,serve,$log) {
+        $scope.name = serve.name;
+        $scope.count = serve.count;
+        $scope.say = function () {
+            serve.sayName();
+
+        }
+    }
+    function ctrl2Fn($scope,fact) {
+
+        //默认从本地取数据
+        var hist = fact.getFromLocal();
+        //根据数据渲染页面
+        $scope.arr = hist;
+
+        $scope.add = function () {
+            //判断文本域是否有值
+            if(!$scope.centance || $scope.centance && $scope.centance.trim()=='') return;
+            //对fact服务的poemlist进行追加数据
+            hist.push($scope.centance);
+            //更新angular视图
+            $scope.arr = hist;
+            //把poemlist的值存储到localstorage
+            fact.saveToLocal();
+            //清空文本框
+            $scope.centance = '';
+        };
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+
+
+/*单选、复选按钮默认隐藏*/
+.toggle-radio input,.toggle-check input{
+     display: none; 
+}
+
+/*选中样式*/
+.toggle-radio input:checked + .track,.toggle-radio input:checked + .track-icon,.toggle-check input:checked + .track-check{
+    background-color: #01ff70;
+    border-width: 0;
+}
+.toggle-radio.toggle-radio-danger input:checked + .track,.toggle-radio.toggle-radio-danger input:checked + .track-icon,.toggle-check.toggle-check-danger input:checked + .track-check{
+    background-color: darkred;
+    border-color:darkred;
+}
+.toggle-radio.toggle-radio-orange input:checked + .track,.toggle-radio.toggle-radio-orange input:checked + .track-icon,.toggle-check.toggle-check-orange input:checked + .track-check{
+    background-color:#ffdc00;
+    border-color: #ffdc00;
+}
+.toggle-radio input:checked + .track .icon,.toggle-radio input:checked + .track-icon::before{
+    margin-left: 24px;
+}
+
+.toggle-check input:checked + .track-check .icons{
+    border-color: #fff;
+    display: block;
+}
+
+
+/*默认样式*/
+.track,.track-icon{
+    width: 48px;
+    height: 26px;
+    border:1px solid #ccc;
+    border-radius: 13px;
+}
+
+.icon,.track-icon::before{
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 12px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin-left: 0;
+    -webkit-transition: margin-left .5s;
+}
+.track-icon::before{
+    content: "" ;
+}
+/*复选*/
+.track-check{
+    width: 24px;
+    height: 24px;
+    border:1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+}
+.icons{
+    width: 15px;
+    height: 9px;
+    border-left: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    transform:rotate(-45deg); 
+    position: absolute;
+    margin:4px;
+     display: none; 
+}
